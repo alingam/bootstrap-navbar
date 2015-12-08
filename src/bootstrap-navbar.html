@@ -1,10 +1,11 @@
 <!--import polymer-->
-<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../polymer/polymer.html">
 
 <!--define custom element-->
 <dom-module id="bootstrap-navbar">
     <template>
-        <link rel="stylesheet" href="css/bootstrap-panel.css">
+        <script src="js/collapse.js"></script>
+        <link rel="import" href="../style-bootstrap/style-bootstrap.html">
         <nav class$="navbar navbar-default {{menuType}}">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -21,7 +22,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        {{innerHTML}}
+                        <content></content>
                     </ul>
                     <template is="dom-if" if="{{isForm}}">
                         <form class$="navbar-form navbar-{{formPosition}}" role="search">
@@ -42,7 +43,7 @@
             properties: {
                 menuType: {
                     type: String,
-                    value: 'default'
+                    value: 'navbar-static-top'
                 },
                 isForm: {
                     type: Boolean,
@@ -66,7 +67,7 @@
                 }
             },
             ready: function() {
-
+                $('.navbar-toggle').collapse();
             },
             attached: function() {
                 // `attached` fires once the element and its parents have been inserted

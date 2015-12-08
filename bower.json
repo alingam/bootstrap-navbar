@@ -27,6 +27,8 @@
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#^1.0.0",
-    "webcomponentsjs": "~0.7.18"
+    "webcomponentsjs": "~0.7.18",
+    "style-bootstrap": "*",
+    "jquery": "~2.1.4"
   }
 }
