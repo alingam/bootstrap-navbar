@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-navbar",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "https://github.com/alingam/bootstrap-navbar",
   "description": "polymer component for bootstrap navbar",
   "main": "src/bootstrap-navbar.html",
