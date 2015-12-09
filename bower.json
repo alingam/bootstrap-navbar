@@ -8,10 +8,12 @@
     "custom-elements",
     "web-components",
     "bootstrap",
+    "polymer1.0",
     "polymer",
     "nav",
     "navbar",
-    "navigation"
+    "navigation",
+    "menu"
   ],
   "authors": [
     "alingam"
