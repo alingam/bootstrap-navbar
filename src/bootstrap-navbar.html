@@ -4,7 +4,9 @@
 <!--define custom element-->
 <dom-module id="bootstrap-navbar">
     <template>
-        <script src="js/collapse.js"></script>
+        <template is="dom-if" if="{{isBootstrap==false}}">
+            <script src="js/collapse.js"></script>
+        </template>
         <link rel="import" href="../../style-bootstrap/style-bootstrap.html">
         <nav class$="navbar navbar-default {{menuType}}">
             <div class="container-fluid">
@@ -64,10 +66,16 @@
                 formPosition: {
                     type: String,
                     value: 'left'
+                },
+                isBootstrap: {
+                    type: Boolean,
+                    value: true
                 }
             },
             ready: function() {
-                $('.navbar-toggle').collapse();
+                if(!this.isBootstrap){
+                    $('.navbar-toggle').collapse();
+                }
             },
             attached: function() {
                 // `attached` fires once the element and its parents have been inserted

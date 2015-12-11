@@ -30,6 +30,12 @@ To display search form in the menu (is-form= true)
 Form position in the menu (form-position= "right")
 Form submit value to display (submit-value= "Login")
 ```
+Is Bootstrap - Are you using bootstrap in your project already then true else false
+```sh
+Bootstrap not there in your application (is-bootstrap= false) 
+
+default is true
+```
 
 Note: Dependency on Jquery.
 
